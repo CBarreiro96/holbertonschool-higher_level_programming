@@ -39,3 +39,7 @@ Correct Usage:
     Traceback (most recent call last):
         ...
     TypeError: text must be a string
+
+    >>> t = "Mwa" + "ha" * 2
+    >>> text_indentation(t)
+    Mwahaha
