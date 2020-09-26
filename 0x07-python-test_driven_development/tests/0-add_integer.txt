@@ -1,0 +1,42 @@
+The ``Add Integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``Add_Integer`` module:
+
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Now use it:
+
+    	>>> add_integer("Holberton", 0)
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer
+
+	>>> add_integer(0, "Holberton")
+	Traceback (most recent call last):
+	    ...
+	TypeError: b must be an integer
+
+	>>> add_integer(["a", "b", "c"], 1)
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer
+
+	>>> add_integer(1, ["a", "b", "c"])
+	Traceback (most recent call last):
+	    ...
+	TypeError: b must be an integer
+
+	>>> add_integer({'Dictionary':44}, 2)
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer
+
+	>>> add_integer(2,{'Dictionary':44})
+	Traceback (most recent call last):
+	    ...
+	TypeError: b must be an integer

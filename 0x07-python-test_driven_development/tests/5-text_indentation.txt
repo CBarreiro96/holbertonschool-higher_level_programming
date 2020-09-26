@@ -1,0 +1,41 @@
+The ``Text Indentation`` module
+===========================
+
+Using ``text_indentation``
+----------------------
+
+This is a text file in reStructuredText format.
+First import ``text_indentation `` from the ``Text Indentation`` module:
+
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+    >>> t="Hello. I am a string? Here is what you should do: parse me."
+
+Correct Usage:
+
+    >>> text_indentation("WacaWaca, Ee!")
+    WacaWaca, Ee!
+
+    >>> t=" : . ? "
+    >>> text_indentation(t)
+    :
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
