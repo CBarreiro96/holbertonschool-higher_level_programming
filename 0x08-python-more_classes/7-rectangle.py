@@ -53,7 +53,6 @@ class Rectangle:
                     total += str(self.print_symbol)
                 except Exception:
                     total += type(self).print_symbol
-            total += ("#" * self.__width)
             if i is not self.__height - 1:
                 total += "\n"
         return total
