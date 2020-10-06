@@ -84,7 +84,9 @@ What you should learn from this project:
 >vagrant@file$
 ### [6. Improve Geometry](./6-base_geometry.py)
 * Write a class BaseGeometry (based on 5-base_geometry.py).
-  *Public instance method: def area(self): that raises an Exception with the message area() is not implemented
+
+
+	*Public instance method: def area(self): that raises an Exception with the message area() is not implemented
   *You are not allowed to import any module
 >vagrant@file$./6-main.py
 >
@@ -93,8 +95,12 @@ What you should learn from this project:
 >vagrant@file$
 ### [7. Integer validator](./7-base_geometry.py)
 * Write a class BaseGeometry (based on 6-base_geometry.py).
-  ***Public instance method: def area(self): that raises an Exception with the message area() is not implemented
-  ***Public instance method: def integer_validator(self, name, value): that validates value
+
+
+	***Public instance method: def area(self): that raises an Exception with the message area() is not implemented
+
+
+	***Public instance method: def integer_validator(self, name, value): that validates value
 	  1.you can assume name is always a string
 >vagrant@file$./7-main.py
 >
@@ -107,7 +113,9 @@ What you should learn from this project:
 >vagrant@file$
 ### [8. Rectangle](./8-rectangle.py)
 * Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py)
-  ***Instantiation with width and height: def __init__(self, width, height):
+
+
+	***Instantiation with width and height: def __init__(self, width, height):
 >vagrant@file$./8-main.py
 ><8-rectangle.Rectangle object at 0x7f6f488f7eb8>
 >
@@ -121,6 +129,8 @@ What you should learn from this project:
 ### [9. Full rectangle](./9-rectangle.py)
 * Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
 (task based on 8-rectangle.py)
+
+
 	***Instantiation with width and height: def __init__(self, width, height):
 >vagrant@file$./9-main.py
 >
@@ -142,6 +152,11 @@ What you should learn from this project:
 * Write a class Square that inherits from Rectangle (9-rectangle.py).
 (task based on 10-square.py).
 >vagrant@file$
+>
+>[Square] 13/13
+>
+>169
+>
 >vagrant@file$
 
 ---
