@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+
 """ Geometry Class """
+
+
 class BaseGeometry:
     """ Class that implemented area """
     def area(self):
