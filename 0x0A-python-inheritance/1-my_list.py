@@ -3,6 +3,8 @@
 
 
 class MyList(list):
-    """"prints the list, but sorted (ascending sort)"""
+    """"Classs my list"""
+
     def print_sorted(self):
+        """prints the list, but sorted (ascending sort)"""
         print(sorted(self))
