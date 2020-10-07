@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Reads a text file (UTF8)"""
 
 
 def read_file(filename=""):
