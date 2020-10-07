@@ -51,42 +51,66 @@ What you should learn from this project:
 
 ### [5. To JSON string](./5-to_json_string.py)
 * Write a function that returns the JSON representation of an object (string):
-
-
+>valgrand@file$./5-main.py
+>
+>[1, 2, 3]
+>
+><class 'str'>
+>
+>{"id": 12, "is_active": true, "name": "John", "info": {"average": 3.14, "age": 36}, "places": ["San Francisco", "Tokyo"]}
+>
+><class 'str'>
+>
+>[TypeError] {3, 132} is not JSON serializable
+>
+>valgrand@file$
 ### [6. From JSON string to Object](./6-from_json_string.py)
 * Write a function that returns an object (Python data structure) represented by a JSON string:
-
-
+>valgrand@file$./6-main.py
+>
+>[1, 2, 3]
+>
+><class 'list'>
+>
+>{'id': 12, 'is_active': True, 'name': 'John', 'info': {'age': 36, 'average': 3.14}, 'places': ['San Francisco', 'Tokyo']}
+>
+><class 'dict'>
+>
+>[ValueError] Expecting property name enclosed in double quotes: line 2 column 25 (char 25)
+>
+>valgrand@file$
 ### [7. Save Object to a file](./7-save_to_json_file.py)
 * Write a function that writes an Object to a text file, using a JSON representation:
-
-
+>valgrand@file$
+>valgrand@file$
 ### [8. Create object from a JSON file](./8-load_from_json_file.py)
 * Write a function that creates an Object from a “JSON file”:
-
-
+>valgrand@file$
+>valgrand@file$
 ### [9. Load, add, save](./9-add_item.py)
 * Write a script that adds all arguments to a Python list, and then save them to a file:
-
-
+>valgrand@file$
+>valgrand@file$
 ### [10. Class to JSON](./10-class_to_json.py)
 * Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:
-
-
+>valgrand@file$
+>valgrand@file$
 ### [11. Student to JSON](./11-student.py)
 * Write a class Student that defines a student by:
-
-
+>valgrand@file$
+>valgrand@file$
 ### [12. Student to JSON with filter](./12-student.py)
 * Write a class Student that defines a student by: (based on 11-student.py)
-
-
+>valgrand@file$
+>valgrand@file$
 ### [13. Student to disk and reload](./13-student.py)
 * Write a class Student that defines a student by: (based on 12-student.py)
-
-
+>valgrand@file$
+>valgrand@file$
 ### [14. Pascal's Triangle](./14-pascal_triangle.py)
 * Technical interview preparation: 
+>valgrand@file$
+>valgrand@file$
 
 ---
 
