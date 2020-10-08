@@ -81,7 +81,8 @@ What you should learn from this project:
 >valgrand@file$
 ### [7. Save Object to a file](./7-save_to_json_file.py)
 * Write a function that writes an Object to a text file, using a JSON representation:
->valgrand@file$
+>valgrand@file$./7-main.py
+>
 >valgrand@file$
 ### [8. Create object from a JSON file](./8-load_from_json_file.py)
 * Write a function that creates an Object from a “JSON file”:

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Create object from json file  """
-
 import json
 
 
