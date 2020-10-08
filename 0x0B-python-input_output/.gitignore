@@ -1,7 +1,8 @@
 *.#
 *#
-*__pycacge__
+*__pycache__
 *main.py
+*main_2.py
 *.js
 *.txt
 *.json
