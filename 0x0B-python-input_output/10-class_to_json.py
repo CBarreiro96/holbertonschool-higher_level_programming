@@ -12,7 +12,6 @@ def class_to_json(obj):
     JSON serialization of an object
     """
 
-
     if hasattr(obj, "__dict__"):
         dictionary = obj.__dict__.copy()
     return dictionary
