@@ -83,26 +83,93 @@ What you should learn from this project:
 * Write a function that writes an Object to a text file, using a JSON representation:
 >valgrand@file$./7-main.py
 >
+>[TypeError] {3, 132} is not JSON serializable
+>
 >valgrand@file$
 ### [8. Create object from a JSON file](./8-load_from_json_file.py)
 * Write a function that creates an Object from a “JSON file”:
->valgrand@file$
+>valgrand@file$./8-main.py
+>
+>[1, 2, 3]
+>
+><class 'list'>
+>
+>{'name': 'John', 'info': {'age': 36, 'average': 3.14}, 'id': 12, 'places': ['San Francisco', 'Tokyo'], 'is_active': True}
+>
+><class 'dict'>
+>
+>[FileNotFoundError] [Errno 2] No such file or directory: 'my_set_doesnt_exist.json'
+>
+>[ValueError] Expecting property name enclosed in double quotes: line 1 column 21 (char 20)
+>
 >valgrand@file$
 ### [9. Load, add, save](./9-add_item.py)
 * Write a script that adds all arguments to a Python list, and then save them to a file:
->valgrand@file$
+>valgrand@file$./9-add_item.py Holberton School
+>
+>["Holberton", "School"]
+>
 >valgrand@file$
 ### [10. Class to JSON](./10-class_to_json.py)
 * Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:
->valgrand@file$
+>valgrand@file$./10-main.py
+>
+><class '10-my_class.MyClass'>
+>
+>[MyClass] John - 89
+>
+><class 'dict'>
+>
+>{'name': 'John', 'number': 89}
+>
+>valgrand@file$./10-main_2.py
+>
+><class '10-my_class_2.MyClass'>
+>
+>MyClass] John - 4 => 1
+>
+>class 'dict'>
+>
+>'number': 4, '_MyClass__name': 'John', 'is_team_red': True, 'score': 1}
+>
 >valgrand@file$
 ### [11. Student to JSON](./11-student.py)
 * Write a class Student that defines a student by:
->valgrand@file$
+>valgrand@file$./11-main.py
+>
+><class 'dict'>
+>
+>ohn
+>
+>class 'str'>
+>
+>23
+<
+><class 'int'>
+>
+><class 'dict'>
+>
+>Bob
+>
+><class 'str'>
+<
+>27
+>
+><class 'int'>
+>
+>11
+>
 >valgrand@file$
 ### [12. Student to JSON with filter](./12-student.py)
 * Write a class Student that defines a student by: (based on 11-student.py)
->valgrand@file$
+>valgrand@file$./12-main.py
+>
+>{'age': 23, 'last_name': 'Doe', 'first_name': 'John'}
+>
+>{'age': 27, 'first_name': 'Bob'}
+>
+>{'age': 27}
+>
 >valgrand@file$
 ### [13. Student to disk and reload](./13-student.py)
 * Write a class Student that defines a student by: (based on 12-student.py)
