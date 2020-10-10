@@ -79,7 +79,10 @@ class Rectangle(Base):
         symbol = '#'
         if self.width == 0 and self.height == 0:
             return
+        for i in range(1,self.y):
+            print()
         for j in range(self.height):
+            print(' ' * self.x, end = "")
             print(symbol * self.width)
     
     def __str__(self):
