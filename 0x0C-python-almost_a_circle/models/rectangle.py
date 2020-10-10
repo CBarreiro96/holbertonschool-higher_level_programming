@@ -72,3 +72,17 @@ class Rectangle(Base):
 
     def area(self):
         return self.width * self.height
+    
+    def display(self):
+        """prints in stdout the Rectangle 
+        instance with the character #"""
+        symbol = '#'
+        if self.width == 0 and self.height == 0:
+            return
+        for j in range(self.height):
+            print(symbol * self.width)
+    
+    def __str__(self):
+        """ Special Method __str__ """
+        Comment = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
+        return Comment.format(self.id, self.x, self.y, self.width, self.height)
