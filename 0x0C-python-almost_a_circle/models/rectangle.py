@@ -72,9 +72,9 @@ class Rectangle(Base):
 
     def area(self):
         return self.width * self.height
-    
+
     def display(self):
-        """prints in stdout the Rectangle 
+        """prints in stdout the Rectangle
         instance with the character #"""
         symbol = '#'
         if self.width == 0 and self.height == 0:
@@ -84,8 +84,25 @@ class Rectangle(Base):
         for j in range(self.height):
             print(' ' * self.x, end = "")
             print(symbol * self.width)
-    
+
     def __str__(self):
         """ Special Method __str__ """
         Comment = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
         return Comment.format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        Argument=['id','width','height','x','y']
+        Count = 0
+        if len(args) != 0:
+            for i in args:
+                if Count == 0:
+                    super().__init__(i)
+                elif Count < len(Argument):
+                    setattr(self,Argument[Count],i)
+                Count += 1
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    super().__init__(value)
+                else:
+                    setattr(self, key, value)
