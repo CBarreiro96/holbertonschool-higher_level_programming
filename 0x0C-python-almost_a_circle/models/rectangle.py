@@ -90,10 +90,10 @@ class Rectangle(Base):
         Comment = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
         return Comment.format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         Argument=['id','width','height','x','y']
         Count = 0
-        if len(args) != 0:
+        if args and len(args) != 0:
             for i in args:
                 if Count == 0:
                     super().__init__(i)
