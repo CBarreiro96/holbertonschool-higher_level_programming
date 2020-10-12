@@ -6,6 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """Class Rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Constructor"""
         self.width = width
         self.height = height
         self.x = x
@@ -76,14 +77,9 @@ class Rectangle(Base):
     def display(self):
         """prints in stdout the Rectangle
         instance with the character #"""
-        symbol = '#'
-        if self.width == 0 and self.height == 0:
-            return
-        for i in range(1,self.y):
-            print()
-        for j in range(self.height):
-            print(' ' * self.x, end = "")
-            print(symbol * self.width)
+        print('\n' * self.y, end='')
+        for row in range(self.height):
+            print("{:s}{:s}".format(" " * self.x, "#" * self.width)) 
 
     def __str__(self):
         """ Special Method __str__ """
