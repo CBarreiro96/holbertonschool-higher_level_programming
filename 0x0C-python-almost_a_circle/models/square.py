@@ -5,12 +5,12 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(size,size,x,y,id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """ Special Method STR """
         st = "[Square] ({:d}) {:d}/{:d} - {:d}"
-        return  st.format(self.id, self.x, self.y, self.width)
+        return st.format(self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
@@ -24,7 +24,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """ Functions to update arguments of each attr """
+        """ Functions to update arguments  """
         Argumentlist = ["id", "size", "x", "y"]
         Count = 0
         if args and len(args) != 0:
@@ -34,7 +34,6 @@ class Square(Rectangle):
                 elif Count < len(Argumentlist):
                     setattr(self, Argumentlist[Count], ar)
                 Count += 1
-
         else:
             for key, value in kwargs.items():
                 if key == "id":
@@ -43,10 +42,6 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        """dictionary representation of a Square"""
-        d = {}
-        d["id"] = self.id
-        d["size"] = self.size
-        d["x"] = self.x
-        d["y"] = self.y
-        return d
+        """ Returns dicitionary representation of Square """
+        Dict = {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+        return Dict
