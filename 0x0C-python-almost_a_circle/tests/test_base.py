@@ -3,6 +3,7 @@
 
 import unittest
 from models.base import Base
+import json
 
 
 class Test_id(unittest.TestCase):
@@ -43,3 +44,40 @@ class Test_id(unittest.TestCase):
         """ More than 1 argument """
         with self.assertRaises(TypeError):
             b1 = Base(5, 1)
+
+class Test_Json(unittest.TestCase):
+    """Test case Json"""
+    def test_empty_to_json_string(self):
+        """Test for passing empty list/ None"""
+        json_s = Base.to_json_string([])
+        self.assertTrue(type(json_s) is str)
+        self.assertEqual(json_s, "[]")
+
+    def test_None_to_json_String(self):
+        json_s = Base.to_json_string(None)
+        self.assertTrue(type(json_s) is str)
+        self.assertEqual(json_s, "[]")
+
+    def test_to_json_string(self):
+        """Tests regular to json string"""
+        Base._Base__nb_objects = 0
+        d1 = {"id": 1, "width": 3, "height": 9, "x": 4, "y": 9}
+        d2 = {"id": 6, "width": 2, "height": 3, "x": 5, "y": 7}
+        json_string = Base.to_json_string([d1, d2])
+        self.assertTrue(type(json_string) is str)
+        d = json.loads(json_string)
+        self.assertEqual(d, [d1, d2])
+
+    def test_from_json_string(self):
+        """Tests regular from_json_string"""
+        json_str = '[{"id": 5, "width": 12, "height": 14, "x": 4, "y": 10}, \
+{"id": 7, "width": 1, "height": 18, "x": 3, "y": 7}]'
+        json_l = Base.from_json_string(json_str)
+        self.assertTrue(type(json_l) is list)
+        self.assertEqual(len(json_l), 2)
+        self.assertTrue(type(json_l[0]) is dict)
+        self.assertTrue(type(json_l[1]) is dict)
+        self.assertEqual(json_l[0],
+                         {"id": 5, "width": 12, "height": 14, "x": 4, "y": 10})
+        self.assertEqual(json_l[1],
+                         {"id": 7, "width": 1, "height": 18, "x": 3, "y": 7})
