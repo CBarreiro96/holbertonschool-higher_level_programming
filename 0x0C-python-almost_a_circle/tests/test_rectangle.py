@@ -21,6 +21,7 @@ class Test_args(unittest.TestCase):
         r.update(2, 2, 2, 2, 2, width=3, height=3, x=3, y=3, id=3)
         self.assertEqual(str(r), "[Rectangle] (2) 2/2 - 2/2")
 
+
 class Test_area(unittest.TestCase):
     """ Class Area """
     def setUp(self):
@@ -41,7 +42,6 @@ class Test_area(unittest.TestCase):
         self.assertEqual(r3.area(), 56)
         r4 = Rectangle(24, 39)
         self.assertEqual(r4.area(), 936)
-
 
     def test_area_args(self):
         """Test too many args for area()"""
