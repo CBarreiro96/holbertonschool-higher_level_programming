@@ -76,6 +76,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ Returns area value of Rectangle instance  """
         return self.width * self.height
 
     def display(self):
@@ -91,6 +92,7 @@ class Rectangle(Base):
         return Comment.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
+        """update arguments of each attr"""
         Argument = ['id', 'width', 'height', 'x', 'y']
         Count = 0
         if args and len(args) != 0:

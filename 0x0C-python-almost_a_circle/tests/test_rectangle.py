@@ -6,6 +6,10 @@ Test Rectangle Unitest
 import unittest
 from models.rectangle import Rectangle
 from models.base import Base
+from models.square import Square
+from os import path, remove
+from unittest.mock import patch
+import io
 
 
 class Test_args(unittest.TestCase):
@@ -320,25 +324,170 @@ class Test_y(unittest.TestCase):
 
 
 class Test_area(unittest.TestCase):
-    """ Class Area """
+    """ Class for unittest of area method """
+
+    def test_area1(self):
+        """ Area 1 """
+        r1 = Rectangle(2, 5)
+        self.assertEqual(r1.area(), 10)
+
+    def test_area2(self):
+        """ Area 2 """
+        r1 = Rectangle(1, 4)
+        self.assertEqual(r1.area(), 4)
+
+    def test_area3(self):
+        """ Area 2 """
+        r1 = Rectangle(3, 3, 1, 1, 1)
+        self.assertEqual(r1.area(), 9)
+
+
+class Test_display(unittest.TestCase):
+    """ Class for unittest of display method """
 
     def setUp(self):
         """ Set up for all methods """
         Base._Base__nb_objects = 0
-        self.r1 = Rectangle(10, 10)
 
-    def test_area(self):
-        """test area"""
-        r1 = Rectangle(13, 15)
-        self.assertEqual(r1.area(), 195)
-        r2 = Rectangle(30, 30)
-        self.assertEqual(r2.area(), 900)
-        r3 = Rectangle(7, 8)
-        self.assertEqual(r3.area(), 56)
-        r4 = Rectangle(24, 39)
-        self.assertEqual(r4.area(), 936)
+    def test_noxy0(self):
+        """ Display no XY """
+        r1 = Rectangle(1, 1)
+        dp = "#\n"
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            r1.display()
+            st = p.getvalue()
+        self.assertEqual(st, dp)
 
-    def test_area_args(self):
-        """Test too many args for area()"""
-        with self.assertRaises(TypeError):
-            r = self.r1.area(1)
+    def test_noxy1(self):
+        """ Display no XY """
+        r1 = Rectangle(2, 2)
+        dp = "##\n##\n"
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            r1.display()
+            st = p.getvalue()
+        self.assertEqual(st, dp)
+
+    def test_noxy2(self):
+        """ Display no XY """
+        r1 = Rectangle(3, 2)
+        dp = "###\n###\n"
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            r1.display()
+            st = p.getvalue()
+        self.assertEqual(st, dp)
+
+    def test_noxy3(self):
+        """ Display no XY """
+        r1 = Rectangle(2, 3)
+        dp = "##\n##\n##\n"
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            r1.display()
+            st = p.getvalue()
+        self.assertEqual(st, dp)
+
+    def test_noy0(self):
+        """ Display no Y """
+        r1 = Rectangle(2, 3, 1)
+        dp = " ##\n ##\n ##\n"
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            r1.display()
+            st = p.getvalue()
+        self.assertEqual(st, dp)
+
+    def test_noy1(self):
+        """ Display no Y """
+        r1 = Rectangle(2, 3, 1)
+        r1.x = 3
+        dp = "   ##\n   ##\n   ##\n"
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            r1.display()
+            st = p.getvalue()
+        self.assertEqual(st, dp)
+
+    def test_xydisplay0(self):
+        """ Display XY """
+        r1 = Rectangle(2, 3, 1, 2)
+        dp = "\n\n ##\n ##\n ##\n"
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            r1.display()
+            st = p.getvalue()
+        self.assertEqual(st, dp)
+
+    def test_xydisplay1(self):
+        """ Display XY """
+        r1 = Rectangle(2, 3, 1, 2)
+        r1.x = 2
+        r1.y = 3
+        dp = "\n\n\n  ##\n  ##\n  ##\n"
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            r1.display()
+            st = p.getvalue()
+        self.assertEqual(st, dp)
+
+
+class Test_str(unittest.TestCase):
+    """ Class for unittest of __str__ method """
+
+    def setUp(self):
+        """ Set up for all methods """
+        Base._Base__nb_objects = 0
+
+    def test_str1(self):
+        """ Test for __str__ """
+        r1 = Rectangle(2, 3)
+        st = "[Rectangle] (1) 0/0 - 2/3"
+        strP = str(r1)
+        self.assertEqual(st, strP)
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            print(r1, end='')
+            pr = p.getvalue()
+        self.assertEqual(st, pr)
+
+    def test_str2(self):
+        """ Test for __str__ """
+        r1 = Rectangle(2, 3, 5)
+        st = "[Rectangle] (1) 5/0 - 2/3"
+        strP = str(r1)
+        self.assertEqual(st, strP)
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            print(r1, end='')
+            pr = p.getvalue()
+        self.assertEqual(st, pr)
+
+    def test_str3(self):
+        """ Test for __str__ """
+        r1 = Rectangle(2, 3, 5, 6)
+        st = "[Rectangle] (1) 5/6 - 2/3"
+        strP = str(r1)
+        self.assertEqual(st, strP)
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            print(r1, end='')
+            pr = p.getvalue()
+        self.assertEqual(st, pr)
+
+    def test_str4(self):
+        """ Test for __str__ """
+        r1 = Rectangle(2, 3, 5, 6, 85)
+        st = "[Rectangle] (85) 5/6 - 2/3"
+        strP = str(r1)
+        self.assertEqual(st, strP)
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            print(r1, end='')
+            pr = p.getvalue()
+        self.assertEqual(st, pr)
+
+    def test_str5(self):
+        """ Test for __str__ """
+        r1 = Rectangle(2, 3, 5, 6, 85)
+        r1.id = 9
+        r1.x = 8
+        r1.y = 7
+        r1.width = 6
+        r1.height = 5
+        st = "[Rectangle] (9) 8/7 - 6/5"
+        strP = str(r1)
+        self.assertEqual(st, strP)
+        with patch('sys.stdout', new=io.StringIO()) as p:
+            print(r1, end='')
+            pr = p.getvalue()
+        self.assertEqual(st, pr)
