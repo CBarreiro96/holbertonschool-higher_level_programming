@@ -57,30 +57,6 @@ class Test_args(unittest.TestCase):
             r1 = Rectangle(1, 1, 1, 1, 1, 1)
 
 
-class Test_area(unittest.TestCase):
-    """ Class Area """
-    def setUp(self):
-        """ Set up for all methods """
-        Base._Base__nb_objects = 0
-        self.r1 = Rectangle(10, 10)
-
-    def test_area(self):
-        """test area"""
-        r1 = Rectangle(13, 15)
-        self.assertEqual(r1.area(), 195)
-        r2 = Rectangle(30, 30)
-        self.assertEqual(r2.area(), 900)
-        r3 = Rectangle(7, 8)
-        self.assertEqual(r3.area(), 56)
-        r4 = Rectangle(24, 39)
-        self.assertEqual(r4.area(), 936)
-
-    def test_area_args(self):
-        """Test too many args for area()"""
-        with self.assertRaises(TypeError):
-            r = self.r1.area(1)
-
-
 class Test_width(unittest.TestCase):
     """Class test_with"""
 
@@ -136,7 +112,6 @@ class Test_width(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1 = Rectangle({4}, 1)
 
-
     def test_width_private(self):
         """ Check private Width """
         r1 = Rectangle(13, 7)
@@ -148,7 +123,6 @@ class Test_width(unittest.TestCase):
 class Test_height(unittest.TestCase):
     """Class test height"""
 
-
     def setUp(self):
         """ Set up for all methods """
         Base._Base__nb_objects = 0
@@ -156,7 +130,6 @@ class Test_height(unittest.TestCase):
         self.r2 = Rectangle(1, 2, 3)
         self.r3 = Rectangle(10, 11, 12, 13, 14)
         self.r4 = Rectangle(2, 16, 17, 18)
-
 
     def test_height(self):
         """Test for functioning height"""
@@ -176,7 +149,6 @@ class Test_height(unittest.TestCase):
         """ Negative Int for height """
         with self.assertRaises(ValueError):
             r1 = Rectangle(1, -5)
-
 
     def test_height_INT_zero(self):
         """ Zero Int for height """
@@ -203,13 +175,13 @@ class Test_height(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1 = Rectangle(4, {1})
 
-
     def test_height_private(self):
         """ Check private height """
         r1 = Rectangle(13, 7)
         self.assertEqual(r1.height, 7)
         with self.assertRaises(AttributeError):
             r1.__height
+
 
 class Test_x(unittest.TestCase):
     """Class test_with"""
@@ -270,7 +242,6 @@ class Test_x(unittest.TestCase):
         """ Set for x """
         with self.assertRaises(TypeError):
             r1 = Rectangle(4, 1, {1})
-
 
     def test_x_private(self):
         """ Check private x """
@@ -340,10 +311,34 @@ class Test_y(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1 = Rectangle(4, 1, 2, {13})
 
-
     def test_y_private(self):
         """ Check private y """
         r1 = Rectangle(1, 1, 5, 9)
         self.assertEqual(r1.y, 9)
         with self.assertRaises(AttributeError):
             r1.__y
+
+
+class Test_area(unittest.TestCase):
+    """ Class Area """
+
+    def setUp(self):
+        """ Set up for all methods """
+        Base._Base__nb_objects = 0
+        self.r1 = Rectangle(10, 10)
+
+    def test_area(self):
+        """test area"""
+        r1 = Rectangle(13, 15)
+        self.assertEqual(r1.area(), 195)
+        r2 = Rectangle(30, 30)
+        self.assertEqual(r2.area(), 900)
+        r3 = Rectangle(7, 8)
+        self.assertEqual(r3.area(), 56)
+        r4 = Rectangle(24, 39)
+        self.assertEqual(r4.area(), 936)
+
+    def test_area_args(self):
+        """Test too many args for area()"""
+        with self.assertRaises(TypeError):
+            r = self.r1.area(1)
