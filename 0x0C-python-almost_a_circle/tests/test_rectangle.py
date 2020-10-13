@@ -175,3 +175,71 @@ class Test_height(unittest.TestCase):
         self.assertEqual(r1.height, 7)
         with self.assertRaises(AttributeError):
             r1.__height
+
+class Test_x(unittest.TestCase):
+    """Class test_with"""
+
+    def setUp(self):
+        """ Set up for all methods """
+        Base._Base__nb_objects = 0
+        self.r1 = Rectangle(1, 2, 4)
+        self.r2 = Rectangle(1, 2, 3)
+        self.r3 = Rectangle(10, 11, 12, 13, 14)
+        self.r4 = Rectangle(2, 16, 17, 18)
+
+    def test_width(self):
+        """Test for functioning width"""
+        self.assertEqual(self.r1.x, 4)
+        self.assertEqual(self.r2.x, 3)
+        self.assertEqual(self.r3.x, 12)
+        self.assertEqual(self.r4.x, 17)
+
+    def test_width_x_INT_neg(self):
+        """ Negative Int for Width """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(7, 5, -1)
+
+    def test_width_x_INT_zero(self):
+        """ Zero Int for Width """
+        r1 = Rectangle(1, 5, 0)
+        self.assertEqual(r1.x, 0)
+
+    def test_width_x_float(self):
+        """ pos float for Width """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 1, 1.0)
+
+    def test_x_None(self):
+        """ None for x """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 1, None)
+
+    def test_width_x_str(self):
+        """Test non-ints for x"""
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r = Rectangle(1, 1, "hello")
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r = Rectangle(1, 1, True)
+
+    def test_width_x_List(self):
+        """ List for x """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(5, 5, [5])
+
+    def test_width_x_Tuple(self):
+        """ Tuple for x """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(3, 2, (1, ))
+
+    def test_width_x_Set(self):
+        """ Set for x """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(4, 1, {1})
+
+
+    def test_xprivate(self):
+        """ Check private x """
+        r1 = Rectangle(1, 1, 5)
+        self.assertEqual(r1.x, 5)
+        with self.assertRaises(AttributeError):
+            r1.__x

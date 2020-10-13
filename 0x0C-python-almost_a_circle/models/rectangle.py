@@ -51,7 +51,7 @@ class Rectangle(Base):
         """private instance x getter"""
         return self.__x
 
-    @height.setter
+    @x.setter
     def x(self, value):
         """ Private instace x setter"""
         if type(value) is not int:
@@ -65,7 +65,7 @@ class Rectangle(Base):
         """private instance y getter"""
         return self.__y
 
-    @height.setter
+    @y.setter
     def y(self, value):
         """ Private instace y setter"""
         if type(value) is not int:
