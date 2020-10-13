@@ -21,6 +21,41 @@ class Test_args(unittest.TestCase):
         r.update(2, 2, 2, 2, 2, width=3, height=3, x=3, y=3, id=3)
         self.assertEqual(str(r), "[Rectangle] (2) 2/2 - 2/2")
 
+    def test_nowidth(self):
+        """ Test for no width """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle()
+
+    def test_noheight(self):
+        """ Test for no height """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1)
+
+    def test_nox(self):
+        """ Test for no x """
+        r1 = Rectangle(1, 1)
+        self.assertEqual(r1.x, 0)
+
+    def test_noy(self):
+        """ Test for no y """
+        r1 = Rectangle(1, 1, 1)
+        self.assertEqual(r1.y, 0)
+
+    def test_noid(self):
+        """ Test for no id """
+        r1 = Rectangle(1, 1, 1, 1)
+        self.assertEqual(r1.id, 1)
+
+    def test_id(self):
+        """ Test for id """
+        r1 = Rectangle(1, 1, 1, 1, 85)
+        self.assertEqual(r1.id, 85)
+
+    def test_extraarg(self):
+        """ Test for no extra arguments """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 1, 1, 1, 1, 1)
+
 
 class Test_area(unittest.TestCase):
     """ Class Area """
@@ -187,25 +222,25 @@ class Test_x(unittest.TestCase):
         self.r3 = Rectangle(10, 11, 12, 13, 14)
         self.r4 = Rectangle(2, 16, 17, 18)
 
-    def test_width(self):
-        """Test for functioning width"""
+    def test_y(self):
+        """Test for functioning x"""
         self.assertEqual(self.r1.x, 4)
         self.assertEqual(self.r2.x, 3)
         self.assertEqual(self.r3.x, 12)
         self.assertEqual(self.r4.x, 17)
 
-    def test_width_x_INT_neg(self):
-        """ Negative Int for Width """
+    def test_x_INT_neg(self):
+        """ Negative Int for x """
         with self.assertRaises(ValueError):
             r1 = Rectangle(7, 5, -1)
 
-    def test_width_x_INT_zero(self):
-        """ Zero Int for Width """
+    def test_x_INT_zero(self):
+        """ Zero Int for x """
         r1 = Rectangle(1, 5, 0)
         self.assertEqual(r1.x, 0)
 
-    def test_width_x_float(self):
-        """ pos float for Width """
+    def test_x_float(self):
+        """ pos float for x """
         with self.assertRaises(TypeError):
             r1 = Rectangle(1, 1, 1.0)
 
@@ -214,32 +249,101 @@ class Test_x(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1 = Rectangle(1, 1, None)
 
-    def test_width_x_str(self):
+    def test_x_str(self):
         """Test non-ints for x"""
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r = Rectangle(1, 1, "hello")
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r = Rectangle(1, 1, True)
 
-    def test_width_x_List(self):
+    def test_x_List(self):
         """ List for x """
         with self.assertRaises(TypeError):
             r1 = Rectangle(5, 5, [5])
 
-    def test_width_x_Tuple(self):
+    def test_x_Tuple(self):
         """ Tuple for x """
         with self.assertRaises(TypeError):
             r1 = Rectangle(3, 2, (1, ))
 
-    def test_width_x_Set(self):
+    def test_x_Set(self):
         """ Set for x """
         with self.assertRaises(TypeError):
             r1 = Rectangle(4, 1, {1})
 
 
-    def test_xprivate(self):
+    def test_x_private(self):
         """ Check private x """
         r1 = Rectangle(1, 1, 5)
         self.assertEqual(r1.x, 5)
         with self.assertRaises(AttributeError):
             r1.__x
+
+
+class Test_y(unittest.TestCase):
+    """Class test_with"""
+
+    def setUp(self):
+        """ Set up for all methods """
+        Base._Base__nb_objects = 0
+        self.r1 = Rectangle(1, 2, 4, 7)
+        self.r2 = Rectangle(1, 2, 3, 5)
+        self.r3 = Rectangle(10, 11, 12, 13, 14)
+        self.r4 = Rectangle(2, 16, 17, 18)
+
+    def test_y(self):
+        """Test for functioning y"""
+        self.assertEqual(self.r1.y, 7)
+        self.assertEqual(self.r2.y, 5)
+        self.assertEqual(self.r3.y, 13)
+        self.assertEqual(self.r4.y, 18)
+
+    def test_y_INT_neg(self):
+        """ Negative Int for y """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(7, 5, 6, -1)
+
+    def test_y_INT_zero(self):
+        """ Zero Int for y """
+        r1 = Rectangle(1, 5, 1, 0)
+        self.assertEqual(r1.y, 0)
+
+    def test_y_float(self):
+        """ pos float for y """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 1, 4, 4.4)
+
+    def test_y_None(self):
+        """ None for y """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 1, 3, None)
+
+    def test_y_str(self):
+        """Test non-ints for y"""
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r = Rectangle(1, 1, 4, "hello")
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r = Rectangle(1, 1, 3, True)
+
+    def test_y_List(self):
+        """ List for y """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(5, 5, 3, [8])
+
+    def test_y_Tuple(self):
+        """ Tuple for y """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(3, 2, 4, (5, ))
+
+    def test_y_Set(self):
+        """ Set for y """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(4, 1, 2, {13})
+
+
+    def test_y_private(self):
+        """ Check private y """
+        r1 = Rectangle(1, 1, 5, 9)
+        self.assertEqual(r1.y, 9)
+        with self.assertRaises(AttributeError):
+            r1.__y
