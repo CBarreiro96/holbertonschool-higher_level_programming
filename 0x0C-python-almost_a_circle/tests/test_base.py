@@ -86,6 +86,22 @@ class Test_Json(unittest.TestCase):
         self.assertEqual(json_l[1],
                          {"id": 7, "width": 1, "height": 18, "x": 3, "y": 7})
 
+    def test_Rectangle(self):
+        """ Test with Rectangle instance """
+        r1 = Rectangle(10, 7, 2, 8)
+        l1 = [r1.to_dictionary()]
+        j1 = Base.to_json_string(l1)
+        st = str(l1)
+        self.assertEqual(j1, st.replace("'", "\""))
+
+    def test_Square(self):
+        """ Test with Square instance """
+        s1 = Square(10, 2, 8)
+        l1 = [s1.to_dictionary()]
+        j1 = Base.to_json_string(l1)
+        st = str(l1)
+        self.assertEqual(j1, st.replace("'", "\""))
+
 
 class Test_instance(unittest.TestCase):
     """ Class Test instance """
@@ -103,3 +119,106 @@ class Test_instance(unittest.TestCase):
         """ Check if is instance """
         s1 = Square(1)
         self.assertTrue(isinstance(s1, Base))
+
+
+class Test_create(unittest.TestCase):
+    """ Class for unittest of create method """
+
+    def setUp(self):
+        """ Set up for all methods """
+        Base._Base__nb_objects = 0
+
+    def test_Rectangle1(self):
+        """ Test with different Rectangle instances """
+        r1 = Rectangle(3, 5)
+        d1 = r1.to_dictionary()
+        r2 = Rectangle.create(**d1)
+        st1 = str(r1)
+        st2 = str(r2)
+        self.assertEqual(st1, st2)
+        self.assertFalse(r1 is r2)
+        self.assertFalse(r1 == r2)
+
+    def test_Rectangle2(self):
+        """ Test with different Rectangle instances """
+        r1 = Rectangle(3, 5, 8)
+        d1 = r1.to_dictionary()
+        r2 = Rectangle.create(**d1)
+        st1 = str(r1)
+        st2 = str(r2)
+        self.assertEqual(st1, st2)
+        self.assertFalse(r1 is r2)
+        self.assertFalse(r1 == r2)
+
+    def test_Rectangle3(self):
+        """ Test with different Rectangle instances """
+        r1 = Rectangle(3, 5, 8, 6)
+        d1 = r1.to_dictionary()
+        r2 = Rectangle.create(**d1)
+        st1 = str(r1)
+        st2 = str(r2)
+        self.assertEqual(st1, st2)
+        self.assertFalse(r1 is r2)
+        self.assertFalse(r1 == r2)
+
+    def test_Rectangle4(self):
+        """ Test with different Rectangle instances """
+        r1 = Rectangle(3, 5, 8, 6, 85)
+        d1 = r1.to_dictionary()
+        r2 = Rectangle.create(**d1)
+        st1 = str(r1)
+        st2 = str(r2)
+        self.assertEqual(st1, st2)
+        self.assertFalse(r1 is r2)
+        self.assertFalse(r1 == r2)
+
+    def test_Square1(self):
+        """ Test with different Square instances """
+        s1 = Square(3)
+        d1 = s1.to_dictionary()
+        s2 = Square.create(**d1)
+        st1 = str(s1)
+        st2 = str(s2)
+        self.assertEqual(st1, st2)
+        self.assertFalse(s1 is s2)
+        self.assertFalse(s1 == s2)
+
+    def test_Square2(self):
+        """ Test with different Square instances """
+        s1 = Square(3, 4)
+        d1 = s1.to_dictionary()
+        s2 = Square.create(**d1)
+        st1 = str(s1)
+        st2 = str(s2)
+        self.assertEqual(st1, st2)
+        self.assertFalse(s1 is s2)
+        self.assertFalse(s1 == s2)
+
+    def test_Square3(self):
+        """ Test with different Square instances """
+        s1 = Square(3, 4, 5)
+        d1 = s1.to_dictionary()
+        s2 = Square.create(**d1)
+        st1 = str(s1)
+        st2 = str(s2)
+        self.assertEqual(st1, st2)
+        self.assertFalse(s1 is s2)
+        self.assertFalse(s1 == s2)
+
+    def test_Square4(self):
+        """ Test with different Square instances """
+        s1 = Square(3, 4, 5, 82)
+        d1 = s1.to_dictionary()
+        s2 = Square.create(**d1)
+        st1 = str(s1)
+        st2 = str(s2)
+        self.assertEqual(st1, st2)
+        self.assertFalse(s1 is s2)
+        self.assertFalse(s1 == s2)
+
+    def test_nokwarg(self):
+        """ Test with no kwarg """
+        s1 = Square(3, 4, 5, 82)
+        d1 = s1.to_dictionary()
+        with self.assertRaises(TypeError):
+            s2 = Square.create(d1)
