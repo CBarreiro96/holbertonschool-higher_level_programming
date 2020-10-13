@@ -4,9 +4,14 @@
 import unittest
 from models.base import Base
 import json
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class Test_id(unittest.TestCase):
+    """Class test id"""
+
+
     def test_no_arg(self):
         """ Id no argument """
         b1 = Base()
@@ -47,6 +52,8 @@ class Test_id(unittest.TestCase):
 
 class Test_Json(unittest.TestCase):
     """Test case Json"""
+
+
     def test_empty_to_json_string(self):
         """Test for passing empty list/ None"""
         json_s = Base.to_json_string([])
@@ -81,3 +88,22 @@ class Test_Json(unittest.TestCase):
                          {"id": 5, "width": 12, "height": 14, "x": 4, "y": 10})
         self.assertEqual(json_l[1],
                          {"id": 7, "width": 1, "height": 18, "x": 3, "y": 7})
+
+class Test_instance(unittest.TestCase):
+    """ Class Test instance """
+
+
+    def test_base_self(self):
+        """ Check if is instance """
+        b1 = Base()
+        self.assertTrue(isinstance(b1, Base))
+
+    def test_Rectangle(self):
+        """ Check if is instance """
+        r1 = Rectangle(1, 1)
+        self.assertTrue(isinstance(r1, Base))
+
+    def test_Square(self):
+        """ Check if is instance """
+        s1 = Square(1)
+        self.assertTrue(isinstance(s1, Base))
