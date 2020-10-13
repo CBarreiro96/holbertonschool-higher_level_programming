@@ -19,7 +19,7 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self,value):
+    def width(self, value):
         """ Private instace width setter"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -33,7 +33,7 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self,value):
+    def height(self, value):
         """ Private instace height setter"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
@@ -48,7 +48,7 @@ class Rectangle(Base):
         return self.__x
 
     @height.setter
-    def x(self,value):
+    def x(self, value):
         """ Private instace x setter"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
@@ -62,7 +62,7 @@ class Rectangle(Base):
         return self.__y
 
     @height.setter
-    def y(self,value):
+    def y(self, value):
         """ Private instace y setter"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
@@ -79,7 +79,7 @@ class Rectangle(Base):
         instance with the character #"""
         print('\n' * self.y, end='')
         for row in range(self.height):
-            print("{:s}{:s}".format(" " * self.x, "#" * self.width)) 
+            print("{:s}{:s}".format(" "*self.x, "#"*self.width))
 
     def __str__(self):
         """ Special Method __str__ """
@@ -87,14 +87,14 @@ class Rectangle(Base):
         return Comment.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        Argument=['id','width','height','x','y']
+        Argument = ['id', 'width', 'height', 'x', 'y']
         Count = 0
         if args and len(args) != 0:
             for i in args:
                 if Count == 0:
                     super().__init__(i)
                 elif Count < len(Argument):
-                    setattr(self,Argument[Count],i)
+                    setattr(self, Argument[Count], i)
                 Count += 1
         else:
             for key, value in kwargs.items():
@@ -102,8 +102,9 @@ class Rectangle(Base):
                     super().__init__(value)
                 else:
                     setattr(self, key, value)
+
     def to_dictionary(self):
         """ Returns dictionary representation of a Rectangle """
         Dict = {"id": self.id, "width": self.width, "height": self.height,
-                  "x": self.x, "y": self.y}
+                "x": self.x, "y": self.y}
         return Dict
