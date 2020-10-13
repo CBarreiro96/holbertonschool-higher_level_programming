@@ -45,16 +45,17 @@ class Test_area(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = self.r1.area(1)
 
+
 class Test_width(unittest.TestCase):
     """Class test_with"""
 
     def setUp(self):
         """ Set up for all methods """
         Base._Base__nb_objects = 0
-        self.r1 = Rectangle(11,11)
-        self.r2 = Rectangle(1,2,3)
-        self.r3 = Rectangle(10,11,12,13,14)
-        self.r4 = Rectangle(2,16,17,18)
+        self.r1 = Rectangle(11, 11)
+        self.r2 = Rectangle(1, 2, 3)
+        self.r3 = Rectangle(10, 11, 12, 13, 14)
+        self.r4 = Rectangle(2, 16, 17, 18)
 
     def test_width(self):
         """Test for functioning width"""
@@ -77,3 +78,100 @@ class Test_width(unittest.TestCase):
         """ pos float for Width """
         with self.assertRaises(TypeError):
             r1 = Rectangle(1.0, 1)
+
+    def test_width_str(self):
+        """Test non-ints for width"""
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            r = Rectangle("hello", 1)
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            r = Rectangle(True, 1)
+
+    def test_width_List(self):
+        """ List for Width """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle([5], 5)
+
+    def test_width_Tuple(self):
+        """ Tuple for Width """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle((3, ), 2)
+
+    def test_width_Set(self):
+        """ Set for Width """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle({4}, 1)
+
+
+    def test_width_private(self):
+        """ Check private Width """
+        r1 = Rectangle(13, 7)
+        self.assertEqual(r1.width, 13)
+        with self.assertRaises(AttributeError):
+            r1.__width
+
+
+class Test_height(unittest.TestCase):
+    """Class test height"""
+
+
+    def setUp(self):
+        """ Set up for all methods """
+        Base._Base__nb_objects = 0
+        self.r1 = Rectangle(11, 11)
+        self.r2 = Rectangle(1, 2, 3)
+        self.r3 = Rectangle(10, 11, 12, 13, 14)
+        self.r4 = Rectangle(2, 16, 17, 18)
+
+
+    def test_height(self):
+        """Test for functioning height"""
+        self.assertEqual(self.r1.height, 11)
+        self.assertEqual(self.r2.height, 2)
+        self.assertEqual(self.r3.height, 11)
+        self.assertEqual(self.r4.height, 16)
+
+    def test_height_str(self):
+        """Test non-ints for height"""
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            r = Rectangle(1, "hello")
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            r = Rectangle(1, True)
+
+    def test_heightintneg(self):
+        """ Negative Int for height """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, -5)
+
+
+    def test_height_INT_zero(self):
+        """ Zero Int for height """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, 0)
+
+    def test_height_float(self):
+        """ pos float for height """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 1.0)
+
+    def test_height_List(self):
+        """ List for height """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(5, [5])
+
+    def test_height_Tuple(self):
+        """ Tuple for height """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle((3, ), 2)
+
+    def test_height_Set(self):
+        """ Set for height """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(4, {1})
+
+
+    def test_height_private(self):
+        """ Check private height """
+        r1 = Rectangle(13, 7)
+        self.assertEqual(r1.height, 7)
+        with self.assertRaises(AttributeError):
+            r1.__height
