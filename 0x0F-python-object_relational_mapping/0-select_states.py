@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # List all states from a given db sorted in ascending order by id
 # Username, password, and database names are given as user args
+
+
 import sys
 import MySQLdb
 
