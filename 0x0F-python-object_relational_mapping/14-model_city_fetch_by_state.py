@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+
 """
 prints all City objects from the database hbtn_0e_14_usa
 """
+
+
 from sys import argv
 from sqlalchemy import (create_engine)
 from model_state import Base, State
