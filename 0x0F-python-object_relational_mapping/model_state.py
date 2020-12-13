@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 '''
 Write a file that contains class defns of a State and an instance
 Base = delcarative_base()
