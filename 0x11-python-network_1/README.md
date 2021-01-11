@@ -3,7 +3,7 @@
 # <img src="https://user-images.githubusercontent.com/66263776/98705433-b6b88f00-234b-11eb-97b7-cb193f7424f4.png" width="20" height= "30">    0x11. Python - Network #1 <img src="https://user-images.githubusercontent.com/66263776/98705433-b6b88f00-234b-11eb-97b7-cb193f7424f4.png" width="20" height= "30">
 
 ## :memo: Activities :memo:
-### [What's my status? #0 mandatory]()
+### [What's my status? #0 mandatory](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/0-hbtn_status.py)
 Write a Python script that fetches https://intranet.hbtn.io/status
 
 * You must use the package urllib
@@ -21,7 +21,7 @@ user@ubuntu:~/0x11$
 ```
 
 
-### [Response header value #0 mandatory]()
+### [Response header value #0 mandatory](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/1-hbtn_header.py)
 Write a Python script that takes in a URL, sends a request to the URL and displays the value of the X-Request-Id variable found in the header of the response.
 
 * You must use the packages urllib and sys
