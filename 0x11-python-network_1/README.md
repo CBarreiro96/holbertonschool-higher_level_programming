@@ -40,7 +40,7 @@ user@ubuntu:~/0x11$
 
 
 
-### [POST an email #0 mandatory]()
+### [POST an email #0 mandatory](://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/2-post_email.py)
 Write a Python script that takes in a URL and an email, sends a POST request to the passed URL with the email as a parameter, and displays the body of the response (decoded in utf-8)
 
 * The email must be sent in the email variable
@@ -57,7 +57,7 @@ user@ubuntu:~/0x11$
 ```
 
 
-### [Error code #0 mandatory]()
+### [Error code](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/3-error_code.py)
 Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response (decoded in utf-8).
 
 * You have to manage urllib.error.HTTPError exceptions and print: Error code: followed by the HTTP status code
@@ -79,7 +79,7 @@ Error code: 500
 user@ubuntu:~/0x11$ 
 ```
 
-### [What's my status? #1 mandatory]()
+### [What's my status?](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/4-hbtn_status.py)
 Write a Python script that fetches https://intranet.hbtn.io/status
 
 * You must use the package requests
@@ -95,7 +95,7 @@ user@ubuntu:~/0x11$
 
 
 
-### [Response header value #1 mandatory]()
+### [Response header value](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/5-hbtn_header.py)
 Write a Python script that takes in a URL, sends a request to the URL and displays the value of the variable X-Request-Id in the response header
 
 * You must use the packages requests and sys
@@ -112,7 +112,7 @@ user@ubuntu:~/0x11$
 ```
 
 
-### [POST an email #1 mandatory]()
+### [POST an email](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/6-post_email.py)
 Write a Python script that takes in a URL and an email address, sends a POST request to the passed URL with the email as a parameter, and finally displays the body of the response.
 
 * The email must be sent in the variable email
@@ -126,7 +126,7 @@ Your email is: hr@holbertonschool.com
 user@ubuntu:~/0x11$ 
 ```
 
-### [Error code #1 mandatory]()
+### [Error code](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/7-error_code.py)
 Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response.
 
 * If the HTTP status code is greater than or equal to 400, print: Error code: followed by the value of the HTTP status code
@@ -147,7 +147,7 @@ user@ubuntu:~/0x11$
 ```
 
 
-### [Search API mandatory]()
+### [Search API](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/8-json_api.py)
 Write a Python script that takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter.
 
 * The letter must be sent in the variable q
@@ -172,7 +172,7 @@ user@ubuntu:~/0x11$ ./8-json_api.py b
 user@ubuntu:~/0x11$ 
 ```
 
-### [My Github! mandatory]()
+### [My Github!](https://github.com/CBarreiro96/holbertonschool-higher_level_programming/blob/master/0x11-python-network_1/10-my_github.py)
 Write a Python script that takes your Github credentials (username and password) and uses the Github API to display your id
 
 * You must use Basic Authentication with a personal access token as password to access to your information (only read:user permission is needed)
