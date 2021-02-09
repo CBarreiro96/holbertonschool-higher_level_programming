@@ -8,7 +8,7 @@ the content of a file.
 
 */
 const argv = process.argv;
-const fs = require('fs');
+const fs = require('fs');// File System module
 const fileName = argv[2];
 fs.readFile(fileName, 'utf8', function (err, data) {
   if (err) {
