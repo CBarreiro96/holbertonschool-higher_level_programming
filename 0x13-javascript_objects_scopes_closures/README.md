@@ -3,8 +3,31 @@
 # <img src="https://user-images.githubusercontent.com/66263776/98705433-b6b88f00-234b-11eb-97b7-cb193f7424f4.png" width="20" height= "30">  0x13. Javascript - Objects, Scopes and Closures <img src="https://user-images.githubusercontent.com/66263776/98705433-b6b88f00-234b-11eb-97b7-cb193f7424f4.png" width="20" height= "30">
 
 ## :book: Description of the proyect :book:
-In this proyect we are going to do diferent task about Javascrpt language 
+In this proyect we are going to do diferent task about Javascrpt language, in this repo you ar going to learn about Object, inherente, classes, initialize instance with **this**, ocurrence  and thing like that
 
+## :books: Important concept :books:
+In this project you need to know some concept about Object, Classs inherence, clouser etc <br>
+In the next link you ar going to find a resume about this concept:
+<details>
+	<summary>:boom:<b>How to create an object in Javascript. </b></summary>
+	<br/>
+    An object is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called properties and methods when they are inside objects.) Let's work through an example to understand what they look like.
+
+    As with many things in JavaScript, creating an object often begins with defining and initializing a variable. For example:
+    ```javascript
+    const objectName = {
+    member1Name: member1Value,
+    member2Name: member2Value,
+    member3Name: member3Value
+};
+    ```
+</details>
+
+<br>
+
+If you like to know about this you can visit the follow page:
+* [Class - ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+* 
 ## :memo: Activities :memo:
 
 ### [Rectangle #0]() 
