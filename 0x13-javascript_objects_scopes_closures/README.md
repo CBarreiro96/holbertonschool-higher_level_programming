@@ -13,7 +13,8 @@ In the next link you ar going to find a resume about this concept:
 	<br/>
     An object is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called properties and methods when they are inside objects.) Let's work through an example to understand what they look like.
 
-    As with many things in JavaScript, creating an object often begins with defining and initializing a variable. For example:
+As with many things in JavaScript, creating an object often begins with defining and initializing a variable. <br>
+**For example:**
 
 ```javascript
     const objectName = {
