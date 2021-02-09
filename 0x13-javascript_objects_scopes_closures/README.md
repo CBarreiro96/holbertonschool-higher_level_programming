@@ -15,27 +15,27 @@ In the next link you ar going to find a resume about this concept:
 
     As with many things in JavaScript, creating an object often begins with defining and initializing a variable. For example:
 
-    ```javascript
+```javascript
     const objectName = {
     member1Name: member1Value,
     member2Name: member2Value,
     member3Name: member3Value
     };
-    ```
+```
 </details>
 <details>
 	<summary>:boom:<b>How to declare a class. </b></summary>
 	<br/>
     One way to define a class is using a class declaration. To declare a class, you use the class keyword with the name of the class ("Rectangle" here).
 
-    ```javascript
+```javascript
     class Rectangle {
         constructor(height, width) {
             this.height = height;
             this.width = width;
         }
     }
-    ```
+```
 
 </details>
 <details>
@@ -46,23 +46,20 @@ In the next link you ar going to find a resume about this concept:
 <details>
 	<summary>:boom:<b>Importance of Scope</b></summary>
 	<br/>
-    The scope is a policy that manages the availability of variables. A variable defined inside a scope is accessible only within that scope, but inaccessible outside.
 
-    In JavaScript, scopes are created by code blocks, functions, modules.
-
-    While const and let variables are scoped by code blocks, functions or modules, var variables are scoped only by functions or modules.
-
-    Scopes can be nested. Inside an inner scope you can access the variables of an outer scope.
-
-    The lexical scope consists of the outer function scopes determined statically. Any function, no matter the place where being executed, can access the variables of its lexical scope (this is the concept of closure).
+The scope is a policy that manages the availability of variables. A variable defined inside a scope is accessible only within that scope, but inaccessible outside.<br>
+In JavaScript, scopes are created by code blocks, functions, modules.<br>
+While const and let variables are scoped by code blocks, functions or modules, var variables are scoped only by functions or modules.<br>
+Scopes can be nested. Inside an inner scope you can access the variables of an outer scope.<br>
+The lexical scope consists of the outer function scopes determined statically. Any function, no matter the place where being executed, can access the variables of its lexical scope (this is the concept of closure).
 </details>
 <details>
 	<summary>:boom:<b>What is clousure</b></summary>
 	<br/>
     Closure means that an inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.<br>
-    <b>Example:<b>
+    <b>Example:</b>
 
-    ```javascript
+```javascript
     function OuterFunction() {
 
         var outerVariable = 1;//---> Lexical Scope
@@ -73,16 +70,17 @@ In the next link you ar going to find a resume about this concept:
 
         InnerFunction();
     }
-    ```
+```
 </details>
 <details>
 	<summary>:boom: <b>What is a prototype</b></summary>
 	<br/>
-    The prototype is an object that is associated with every functions and objects by default in JavaScript, where function's prototype property is accessible and modifiable and object's prototype property (aka attribute) is not visible.
 
-    Every function includes prototype object by default. 
+The prototype is an object that is associated with every functions and objects by default in JavaScript, where function's prototype property is accessible and modifiable and object's prototype property (aka attribute) is not visible.
 
-    ```javascript
+Every function includes prototype object by default. 
+
+```javascript
     function Student() {
         this.name = 'John';
         this.gender = 'M';
@@ -95,7 +93,7 @@ In the next link you ar going to find a resume about this concept:
 
     var studObj2 = new Student();
     alert(studObj2.age); // 15
-    ```
+```
 </details>
 
 <br>
