@@ -10,7 +10,7 @@ In this repository you are going to find activities of holberton to learn difere
 
 ### :notebook_with_decorative_cover: Other repo_information :notebook_with_decorative_cover:
 * <a href="https://github.com/CBarreiro96/holbertonschool-low_level_programming">Low level language</a>
-* <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming">High Level language</a>
+* <a href="https://github.com/CBarreiro96/holberton-system_engineering-devops">system_engineering-devops</a>
 
 ---
 
@@ -402,6 +402,50 @@ In this repository you are going to find activities of holberton to learn difere
                 <li>What is a closure</li>
                 <li>What is a prototype</li>
                 <li>How to inherit an object from another</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td align="center"> <a href="">Web scraping</a> </td>
+        <td>
+            <ul>
+                <li>request</li>
+                <li>fs</li>
+            </ul>
+        </td>
+        <td>
+            <h4>General</h4>
+            <ul>
+                <li>Why JavaScript programming is amazing</li>
+                <li>How to manipulate JSON data</li>
+                <li>How to use request and fetch API</li>
+                <li>How to read and write a file using fs module</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td align="center"> <a href="">Web jQuery</a> </td>
+        <td>
+            <ul>
+                <li>GET</li>
+                <li>POST</li>
+                <li>PUT</li>
+            </ul>
+        </td>
+        <td>
+            <h4>General</h4>
+            <ul>
+                <li>Why JQuery make front-end programming so easy (don’t forget to tweet today, with the hashtag #ilovejquery :))</li>
+                <li>How to select HTML elements in JavaScript</li>
+                <li>How to select HTML elements with JQuery</li>
+                <li>What are differences between ID, class and tag name selectors</li>
+                <li>How to modify an HTML element style</li>
+                <li>How to get and update an HTML element content</li>
+                <li>How to modify the DOM</li>
+                <li>How to make a GET request with JQuery Ajax</li>
+                <li>How to make a POST request with JQuery Ajax</li>
+                <li>How to listen/bind to DOM events</li>
+                <li>How to listen/bind to user events</li>
             </ul>
         </td>
     </tr>
