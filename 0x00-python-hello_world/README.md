@@ -1,4 +1,6 @@
-# 0x00. Python - Hello, World
+<div align="center"><img src="https://user-images.githubusercontent.com/66263776/98416555-43fa9b80-204d-11eb-800a-df8e19b62655.jpg" width="500" height= "200"> </div>
+
+# <div align="center"><img src="https://user-images.githubusercontent.com/66263776/98705433-b6b88f00-234b-11eb-97b7-cb193f7424f4.png" width="20" height= "30"> 0x00. Python - Hello, World <img src="https://user-images.githubusercontent.com/66263776/98705433-b6b88f00-234b-11eb-97b7-cb193f7424f4.png" width="20" height= "30"></div>
 
 ## Resources:books:
 Read or watch:
@@ -26,10 +28,11 @@ What you should learn from this project:
 * What is the official Holberton Python coding style and how to check your code with PEP 8
 
 ---
-
-### [0. Run Python file](./0-run)
-* Write a Shell script that runs a Python script.
-
+## :memo: Exercise :memo:
+<details>
+    <summary><a href="./0-run"><b>#0 Run Python file</b></a></summary>
+Write a Shell script that runs a Python script.
+</details>
 
 ### [1. Run inline](./1-run_inline)
 * Write a Shell script that runs Python code.
