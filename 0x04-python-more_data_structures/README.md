@@ -7,7 +7,7 @@ Read or watch:
 * [Learn to Program 12 Lambda Map Filter Reduce](https://intranet.hbtn.io/rltoken/AT-UtsGuhgIzQSwSdKvckw)
 
 <details>
-<summary> <b style="color:red"> Command</b> </summary>
+<summary> <b>🛠⚙️ Command ⚙️🛠</b> </summary>
 <div align="center">
 <table>
     <tr>
@@ -45,6 +45,23 @@ Read or watch:
             <h6>OUTPUT</h6>
             <code>
                 set()
+            </code>
+        </td>
+    </tr>
+    <tr>
+        <td align="center"><b>Set operation</b></td>
+        <td align="center">
+            <h4>I. Contention</h4>
+            <h6>INPUT</h6>
+            <code>
+                my_set = {'S', 'E', 'T'}
+            </code>
+            <code>
+                print('S' in my_set)
+            </code>
+            <h6>OUTPUT</h6>
+            <code>
+                True
             </code>
         </td>
     </tr>
