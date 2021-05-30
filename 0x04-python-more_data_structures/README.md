@@ -16,8 +16,8 @@ Read or watch:
         <td align="center"><b>Example</b></td>
     </tr>
     <tr>
-        <td align="center" rowspan="4">SETS</td>
-        <td align="center" rowspan="4">It is a data structure that mathematical sets represent</td>
+        <td align="center" rowspan="6">SETS</td>
+        <td align="center" rowspan="6">It is a data structure that mathematical sets represent</td>
         <td align="center"><b>Set creation</b></td>
     </tr>
     <tr>
@@ -50,6 +50,8 @@ Read or watch:
     </tr>
     <tr>
         <td align="center"><b>Set operation</b></td>
+    </tr>
+    <tr>
         <td align="center">
             <h4>I. Contention</h4>
             <h6>INPUT</h6>
