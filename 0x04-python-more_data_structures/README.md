@@ -27,6 +27,7 @@ Read or watch:
             <code>
                 my_set = {5, 8, 2, 9, 4}
             </code>
+            <br>
             <code>
                 print(my_set)
             </code>
@@ -39,6 +40,7 @@ Read or watch:
             <code>
                 my_set = set()<br>
             </code>
+            <br>
             <code>
                 print(my_set)
             </code>
@@ -58,6 +60,7 @@ Read or watch:
             <code>
                 my_set = {'S', 'E', 'T'}
             </code>
+            <br>
             <code>
                 print('S' in my_set)
             </code>
