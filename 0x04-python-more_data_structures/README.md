@@ -25,22 +25,22 @@ Read or watch:
             <h4>No empty code</h4>
             <h6>INPUT</h6>
             <code>
-            my_set = {5, 8, 2, 9, 4}<br>
-            print(my_set)<br>
+                my_set = {5, 8, 2, 9, 4}<br>
+                print(my_set)
             </code>
             <h6>OUTPUT</h6>
             <code>
-            {2, 4, 5, 8, 9}<br>
+                {2, 4, 5, 8, 9}
             </code>
             <h4>Empty code</h4>
             <h6>INPUT</h6>
             <code>
-            my_set = set()<br>
-            print(my_set)<br>
+                my_set = set()<br>
+                print(my_set)
             </code>
             <h6>OUTPUT</h6>
             <code>
-            set()<br>
+                set()
             </code>
         </td>
     </tr>
