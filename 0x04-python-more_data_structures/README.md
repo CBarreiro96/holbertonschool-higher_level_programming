@@ -6,7 +6,50 @@ Read or watch:
 * [Lambda, filter, reduce and map](https://intranet.hbtn.io/rltoken/xXAlsMIs9-sCL4fljYeNfg)
 * [Learn to Program 12 Lambda Map Filter Reduce](https://intranet.hbtn.io/rltoken/AT-UtsGuhgIzQSwSdKvckw)
 
+<details>
+<summary> <b style="color:red"> Command</b> </summary>
+<div align="center">
+<table>
+    <tr>
+        <td align="center"><b>Concept</b></td>
+        <td align="center"><b>Description</b></td>
+        <td align="center"><b>Example</b></td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="4">SETS</td>
+        <td align="center" rowspan="4">It is a data structure that mathematical sets represent</td>
+        <td align="center"><b>Set creation</b></td>
+    </tr>
+    <tr>
+        <td align="center">
+            <h4>No empty code</h4>
+            <code>
+            #Imput
+            my_set = {5, 8, 2, 9, 4}
+            print(my_set)
+            </code>
+            <code>
+            #OUTPUT
+            {2, 4, 5, 8, 9}
+            </code>
+            <h4>Empty code</h4>
+            <code>
+            #INPUT
+            my_set = set()
+            print(my_set)
+            </code>
+            <code>
+            #OUTPUT
+            set()
+            </code>
+        </td>
+    </tr>
+</table>
+</div>
+</details>
+
 ---
+
 ## Learning Objectives:bulb:
 What you should learn from this project:
 
