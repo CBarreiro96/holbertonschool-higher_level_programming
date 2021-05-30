@@ -25,7 +25,9 @@ Read or watch:
             <h4>No empty code</h4>
             <h6>INPUT</h6>
             <code>
-                my_set = {5, 8, 2, 9, 4}<br>
+                my_set = {5, 8, 2, 9, 4}
+            </code>
+            <code>
                 print(my_set)
             </code>
             <h6>OUTPUT</h6>
@@ -36,6 +38,8 @@ Read or watch:
             <h6>INPUT</h6>
             <code>
                 my_set = set()<br>
+            </code>
+            <code>
                 print(my_set)
             </code>
             <h6>OUTPUT</h6>
