@@ -23,24 +23,24 @@ Read or watch:
     <tr>
         <td align="center">
             <h4>No empty code</h4>
+            <h6>INPUT</h6>
             <code>
-            #Imput
-            my_set = {5, 8, 2, 9, 4}
-            print(my_set)
+            my_set = {5, 8, 2, 9, 4}<br>
+            print(my_set)<br>
             </code>
+            <h6>OUTPUT</h6>
             <code>
-            #OUTPUT
-            {2, 4, 5, 8, 9}
+            {2, 4, 5, 8, 9}<br>
             </code>
             <h4>Empty code</h4>
+            <h6>INPUT</h6>
             <code>
-            #INPUT
-            my_set = set()
-            print(my_set)
+            my_set = set()<br>
+            print(my_set)<br>
             </code>
+            <h6>OUTPUT</h6>
             <code>
-            #OUTPUT
-            set()
+            set()<br>
             </code>
         </td>
     </tr>
