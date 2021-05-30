@@ -13,15 +13,13 @@ Read or watch:
     <tr>
         <td align="center"><b>Concept</b></td>
         <td align="center"><b>Description</b></td>
-        <td align="center"><b>Example</b></td>
+        <td align="center" colspan="2"><b>Example</b></td>
     </tr>
     <tr>
         <td align="center" rowspan="6">SETS</td>
         <td align="center" rowspan="6">It is a data structure that mathematical sets represent</td>
         <td align="center"><b>Set creation</b></td>
-    </tr>
-    <tr>
-        <td align="center">
+                <td align="center">
             <h4>No empty code</h4>
             <h6>INPUT</h6>
             <code>
@@ -51,11 +49,11 @@ Read or watch:
         </td>
     </tr>
     <tr>
-        <td align="center"><b>Set operation</b></td>
+        <td align="center" rowspan="3"><b>Set operation</b></td>
+        <td align="center"><b>I. Contention</b></td>
     </tr>
     <tr>
         <td align="center">
-            <h4>I. Contention</h4>
             <h6>INPUT</h6>
             <code>
                 my_set = {'S', 'E', 'T'}
