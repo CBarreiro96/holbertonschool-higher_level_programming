@@ -16,8 +16,8 @@ Read or watch:
         <td align="center" colspan="2"><b>Example</b></td>
     </tr>
     <tr>
-        <td align="center" rowspan="6">SETS</td>
-        <td align="center" rowspan="6">It is a data structure that mathematical sets represent</td>
+        <td align="center" rowspan="8">SETS</td>
+        <td align="center" rowspan="8">It is a data structure that mathematical sets represent</td>
         <td align="center"><b>Set creation</b></td>
                 <td align="center">
             <h4>No empty code</h4>
@@ -49,7 +49,7 @@ Read or watch:
         </td>
     </tr>
     <tr>
-        <td align="center" rowspan="3"><b>Set operation</b></td>
+        <td align="center" rowspan="6"><b>Set operation</b></td>
         <td align="center"><b>I. Contention</b></td>
     </tr>
     <tr>
@@ -92,6 +92,33 @@ Read or watch:
             <h6>OUTPUT</h6>
             <code>
                 {1, 2, 3, 4, 6}
+            </code>
+        </td>
+    </tr>
+    <tr>
+        <td align="center"><b>III INTERSECTION</b><td>
+    </tr>
+    <tr>
+        <td align="center">
+            <h6>INPUT</H6>
+            <code>
+                set_1 = {1, 2, 3}
+            </code>
+            <br>
+            <code>
+            set_2 = {1, 3, 5}
+            </code>
+            <br>
+            <code>
+            intersection_set = set_1.intersection(set_2)
+            </code>
+            <br>
+            <code>
+            print(intersection_set)
+            </code>
+            <h6>OUTPUT</h6>
+            <code>
+            {1, 3}
             </code>
         </td>
     </tr>
