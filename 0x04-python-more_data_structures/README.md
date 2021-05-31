@@ -68,6 +68,33 @@ Read or watch:
             </code>
         </td>
     </tr>
+    <tr>
+        <td align="center"><b>II UNION </b></td>
+    </tr>
+    <tr>
+        <td align="center">
+            <h6>INPUT</h6>
+            <code>
+                set_1 = {1, 2, 3}
+            </code>
+            <br>
+            <code>
+                set_2 = {2, 4, 6}
+            </code>
+            <br>
+            <code>
+               union_set = set_1.union(set_2) 
+            </code>
+            <br>
+            <code>
+                print(union_set)
+            </code>
+            <h6>OUTPUT</h6>
+            <code>
+                {1, 2, 3, 4, 6}
+            </code>
+        </td>
+    </tr>
 </table>
 </div>
 </details>
