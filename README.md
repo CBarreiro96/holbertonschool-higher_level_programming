@@ -14,6 +14,39 @@ In this repository you are going to find activities of holberton to learn difere
 
 ---
 
+<h2 align="center">📌 Index Files 📌</h2>
+<div align="center">
+    <table>
+        <tr align="center">
+            <td  rowspan="4">Python</td>
+            <td><a href="#indice1">1. Hello World</a></td>
+            <td><a href="#indice2">2. If-else-loop-function</a></td>
+            <td><a href="#indice3">3. Import modules</a></td>
+            <td><a href="#indice4">4. Data Structures: Lists, Tuples</a></td>
+        </tr>
+        <tr align="center">
+            <td><a href="#indice5">5. More Data Structures: Set, Dictionary</a></td>
+            <td><a href="#indice6">6. Exceptions</a></td>
+            <td><a href="#indice7">7. Classes and Objects</a></td>
+            <td><a href="#indice8">8. Test-driven development</a></td>
+        </tr>
+        <tr align="center">
+            <td><a href="#indice9">9. More Classes and Objects</a></td>
+            <td><a href="#indice10">10. Everything is object</a></td>
+            <td><a href="#indice11">11. Inheritance</a></td>
+            <td><a href="#indice12">12. Input/Output</a></td>
+        </tr>
+        <tr align="center">
+            <td><a href="#indice13">13. Almost a circle</a></td>
+            <td><a href="#indice14">14. Object-relational mapping</a></td>
+            <td><a href="#indice15">15. Network #0</a></td>
+            <td><a href="#indice16">16. Network #1</a></td>
+        </tr>
+    </table>
+</div>
+
+---
+
 <h2 align="center">📖 Repository content 📖</h2>
 
 <table>
@@ -25,7 +58,7 @@ In this repository you are going to find activities of holberton to learn difere
     </tr>
     <tr>
         <th align="center" rowspan="16"><center>PYTHON <img src="https://user-images.githubusercontent.com/66263776/115491768-2e0d1b80-a226-11eb-81c1-8c733c015cda.png" width="90" height= "90"></center></th>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world">Hello World</a></td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world" id="indice1">Hello World</a></td>
         <td>
             <ul>
                 <li>python3-pep8</li>
@@ -50,7 +83,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world">If-else-loop-function</a></td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world" id="indice2">If-else-loop-function</a></td>
         <td>
             <ul>
                 <li>if-else</li>
@@ -73,7 +106,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x02-python-import_modules">Import modules</a></td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x02-python-import_modules" id="indice3">Import modules</a></td>
         <td>
             <ul>
                 <li>import</li>
@@ -93,7 +126,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"><a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x03-python-data_structures">Data Structures: Lists, Tuples</a></td>
+        <td align="center"><a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x03-python-data_structures" id="indice4">Data Structures: Lists, Tuples</a></td>
         <td>
             <ul>
                 <li>List</li>
@@ -120,7 +153,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x04-python-more_data_structures">More Data Structures: Set, Dictionary</a> </td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x04-python-more_data_structures" id="indice5">More Data Structures: Set, Dictionary</a> </td>
         <td>
             <ul>
                 <li>lambda</li>
@@ -149,7 +182,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x05-python-exceptions">Exceptions</a> </td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x05-python-exceptions" id="indice6">Exceptions</a> </td>
         <td>
             <ul>
                 <li>try .... except</li>
@@ -170,7 +203,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x06-python-classes">Classes and Objects</a></td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x06-python-classes" id="indice7">Classes and Objects</a></td>
         <td>
             <ul>
                 <li>__init__</li>
@@ -205,7 +238,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x07-python-test_driven_development">Test-driven development</a> </td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x07-python-test_driven_development" id="indice8">Test-driven development</a> </td>
         <td>
             <ul>
                 <li>Unitest</li>
@@ -226,7 +259,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">More Classes and Objects</a> </td>
+        <td align="center"> <a href="" id="indice9">More Classes and Objects</a> </td>
         <td>
             <ul>
                 <li>__init__</li>
