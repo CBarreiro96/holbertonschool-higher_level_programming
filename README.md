@@ -42,6 +42,18 @@ In this repository you are going to find activities of holberton to learn difere
             <td><a href="#indice15">15. Network #0</a></td>
             <td><a href="#indice16">16. Network #1</a></td>
         </tr>
+        <tr align="center">
+            <td>SQL</td>
+            <td colspan="2"><a href="#indice17">1. Introduction</a></td>
+            <td colspan="2"><a href="#indice18">2. More queries</a></td>
+        </tr>
+        <tr align="center">
+            <td  rowspan="4">Javascript</td>
+            <td><a href="#indice19">1. Warm up</a></td>
+            <td><a href="#indice20">2. Objects, Scopes and Closures</a></td>
+            <td><a href="#indice14">3. Web scraping</a></td>
+            <td><a href="#indice14">4. Web jQuery</a></td>
+        </tr>
     </table>
 </div>
 
@@ -301,29 +313,29 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">Everything is object</a> </td>
+        <td align="center"> <a href="" id="indice10">Everything is object</a> </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">Inheritance</a> </td>
+        <td align="center"> <a href="" id="indice11">Inheritance</a> </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">Input/Output</a> </td>
+        <td align="center"> <a href="" id="indice12">Input/Output</a> </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">Almost a circle</a> </td>
+        <td align="center"> <a href="" id="indice13">Almost a circle</a> </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">Object-relational mapping</a> </td>
+        <td align="center"> <a href="" id="indice14">Object-relational mapping</a> </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">Network #0</a> </td>
+        <td align="center"> <a href="" id="indice15">Network #0</a> </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">Network #1</a> </td>
+        <td align="center"> <a href="" id="indice16">Network #1</a> </td>
     </tr>
     <tr>
         <th align="center" rowspan="2"><center>SQL <img src="https://user-images.githubusercontent.com/66263776/115609929-c8fd0880-a2ad-11eb-9ffc-9e870748a905.png" width="90" height= "60"></center></th>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x0D-SQL_introduction">Introduction</a> </td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x0D-SQL_introduction" id="indice17">Introduction</a> </td>
         <td>
             <ul>
                 <li>CREATE</li>
@@ -354,7 +366,7 @@ In this repository you are going to find activities of holberton to learn difere
         </td>
     </tr>
     <tr>
-        <td align="center"> <a href="">More queries</a> </td>
+        <td align="center"> <a href="" id="indice18">More queries</a> </td>
         <td>
             <ul>
                 <li>left join</li>
@@ -381,7 +393,7 @@ In this repository you are going to find activities of holberton to learn difere
     </tr>
     <tr>
         <th align="center" rowspan="4"><center>Javascript<img src="https://user-images.githubusercontent.com/66263776/115613620-3ca11480-a2b2-11eb-986f-3d8bdaa6d426.png" width="70" height= "70"></center></th>
-        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x12-javascript-warm_up">Warm up</a> </td>
+        <td align="center"> <a href="https://github.com/CBarreiro96/holbertonschool-higher_level_programming/tree/master/0x12-javascript-warm_up" id="indice19">Warm up</a> </td>
         <td>
             <ul>
                 <li>var</li>
